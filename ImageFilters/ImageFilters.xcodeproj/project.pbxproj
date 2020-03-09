@@ -61,11 +61,11 @@
 				454F6BE72416DCEF00742A6E /* AppDelegate.swift */,
 				454F6BE92416DCEF00742A6E /* SceneDelegate.swift */,
 				454F6BEB2416DCEF00742A6E /* ViewController.swift */,
+				454F6BFB2416E32900742A6E /* ImageScaling.swift */,
 				454F6BED2416DCEF00742A6E /* Main.storyboard */,
 				454F6BF02416DCF200742A6E /* Assets.xcassets */,
 				454F6BF22416DCF200742A6E /* LaunchScreen.storyboard */,
 				454F6BF52416DCF200742A6E /* Info.plist */,
-				454F6BFB2416E32900742A6E /* ImageScaling.swift */,
 			);
 			path = ImageFilters;
 			sourceTree = "<group>";
