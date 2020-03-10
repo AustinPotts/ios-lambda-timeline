@@ -79,10 +79,34 @@ class ViewController: UIViewController {
         return UIImage(cgImage: outputCGImage)
     }
     
+    
+    //CIColorMap
+    func fadeImage(_ image: UIImage) -> UIImage? {
+        
+        guard let cgImage = image.cgImage else {return nil}
+        
+        let ciImage = CIImage(cgImage: cgImage)
+        
+        let filter = CIFilter.photoEffectFade()
+        filter.inputImage = ciImage
+    
+        
+        guard let outputCIimage = filter.outputImage else { return nil }
+        
+        
+        guard let outputCGImage = context.createCGImage(outputCIimage, from: CGRect(origin: CGPoint.zero, size: image.size)) else { return nil }
+           
+           
+           return UIImage(cgImage: outputCGImage)
+        
+    }
+    
+    
     private func updateImage(){
            
           if let scaledImage = scaledImage {
-             imageViewer.image = filterImage(scaledImage)
+             imageViewer.image = fadeImage(scaledImage)
+           
            } else {
                imageViewer.image = nil // allows us to clear out the image
            }
@@ -112,6 +136,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var brightnessSlider: UISlider!
     @IBOutlet weak var contrastSlider: UISlider!
     @IBOutlet weak var saturationSlider: UISlider!
+    @IBOutlet weak var fadeSlider: UISlider!
     @IBOutlet weak var imageViewer: UIImageView!
     
     
