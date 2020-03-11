@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoRecorder_Afternoon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="9Qj-7t-ocQ" kind="show" identifier="ShowCamera" id="z6X-zp-pTi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="101"/>
+        </scene>
+        <!--Camera On View Controller-->
+        <scene sceneID="eTp-w4-qZU">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="9Qj-7t-ocQ" customClass="CameraOnViewController" customModule="VideoRecorder_Afternoon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MNE-nq-y5g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZ2-ml-Vfn" customClass="CameraPreview" customModule="VideoRecorder_Afternoon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1X-lz-Bfz">
+                                        <rect key="frame" x="132" y="651" width="150" height="146"/>
+                                        <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="Record copy">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.001521902144" green="0.65311706849999995" blue="0.3171931529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="f1X-lz-Bfz" secondAttribute="bottom" constant="99" id="1HJ-Cx-wEo"/>
+                                    <constraint firstAttribute="trailing" secondItem="f1X-lz-Bfz" secondAttribute="trailing" constant="132" id="JUH-fD-STF"/>
+                                    <constraint firstItem="f1X-lz-Bfz" firstAttribute="top" secondItem="zZ2-ml-Vfn" secondAttribute="top" constant="651" id="Jic-Mp-6mh"/>
+                                    <constraint firstItem="f1X-lz-Bfz" firstAttribute="leading" secondItem="zZ2-ml-Vfn" secondAttribute="leading" constant="132" id="jSM-KV-vQt"/>
+                                    <constraint firstAttribute="width" constant="414" id="m1p-vH-4mm"/>
+                                    <constraint firstAttribute="height" constant="896" id="wro-zk-1k5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32453566789999999" green="0.40997284649999999" blue="0.54369235039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zZ2-ml-Vfn" secondAttribute="bottom" id="CFq-xo-ygH"/>
+                            <constraint firstItem="zZ2-ml-Vfn" firstAttribute="leading" secondItem="9k0-jC-hft" secondAttribute="leading" id="JXn-Pn-rpq"/>
+                            <constraint firstItem="zZ2-ml-Vfn" firstAttribute="trailing" secondItem="9k0-jC-hft" secondAttribute="trailing" id="mHG-UW-spl"/>
+                            <constraint firstItem="zZ2-ml-Vfn" firstAttribute="top" secondItem="MNE-nq-y5g" secondAttribute="top" id="wJc-Hj-ScM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9k0-jC-hft"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YT1-D0-3So"/>
+                    <connections>
+                        <outlet property="cameraView" destination="zZ2-ml-Vfn" id="QZ1-0q-hux"/>
+                        <outlet property="recordButton" destination="f1X-lz-Bfz" id="92y-Bh-fA5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIj-6o-8oS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Record copy" width="116" height="116"/>
+    </resources>
+</document>
