@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,9 +42,13 @@
                                         <state key="normal" image="Record copy">
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <state key="selected" image="Stop copy"/>
+                                        <connections>
+                                            <action selector="recordButtonPressed:" destination="9Qj-7t-ocQ" eventType="touchUpInside" id="rDr-jq-yMR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.001521902144" green="0.65311706849999995" blue="0.3171931529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="f1X-lz-Bfz" secondAttribute="bottom" constant="99" id="1HJ-Cx-wEo"/>
                                     <constraint firstAttribute="trailing" secondItem="f1X-lz-Bfz" secondAttribute="trailing" constant="132" id="JUH-fD-STF"/>
@@ -55,7 +59,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.32453566789999999" green="0.40997284649999999" blue="0.54369235039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="zZ2-ml-Vfn" secondAttribute="bottom" id="CFq-xo-ygH"/>
                             <constraint firstItem="zZ2-ml-Vfn" firstAttribute="leading" secondItem="9k0-jC-hft" secondAttribute="leading" id="JXn-Pn-rpq"/>
@@ -77,5 +81,6 @@
     </scenes>
     <resources>
         <image name="Record copy" width="116" height="116"/>
+        <image name="Stop copy" width="116" height="116"/>
     </resources>
 </document>
